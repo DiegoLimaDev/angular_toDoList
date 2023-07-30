@@ -1,0 +1,44 @@
+<h1 class="text-center">To do List</h1>
+<div class="container">
+  <router-outlet></router-outlet>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <div class="input-group mb-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Todo task"
+          aria-label="Todo task"
+          aria-describedby="button-addon2"
+          [(ngModel)]="newTodo" />
+        <button
+          class="btn btn-outline-secondary btn-primary"
+          type="button"
+          id="button-addon2"
+          style="color: white"
+          (click)="saveTodo()">
+          Add
+        </button>
+      </div>
+      <table class="table table-striped ustify-content-md-between">
+        <tbody>
+          <tr *ngFor="let item of todos; let i = index">
+            <th scope="row" style="width: 10%">{{ i + 1 }}</th>
+            <td
+              class="{{ item.isCompleted ? '' : 'doneTodo' }}"
+              style="width: 80%"
+              (click)="doneTodo(i)">
+              {{ item.name }}
+            </td>
+            <td
+              class="removeButton text-right"
+              (click)="removeTodo(i)"
+              style="width: 10%">
+              X
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
