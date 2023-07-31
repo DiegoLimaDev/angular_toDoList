@@ -7,15 +7,9 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './page/todo-list/todo-list.component';
 import { ApiListComponent } from './page/api-list/api-list.component';
-import { NotFoundComponent } from './page/not-found/not-found.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoListComponent,
-    ApiListComponent,
-    NotFoundComponent,
-  ],
+  declarations: [AppComponent, TodoListComponent, ApiListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
