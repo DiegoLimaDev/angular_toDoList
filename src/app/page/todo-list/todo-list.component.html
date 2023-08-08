@@ -20,12 +20,12 @@
           Add
         </button>
       </div>
-      <table class="table table-striped ustify-content-md-between">
+      <table class="table table-striped justify-content-md-between">
         <tbody>
           <tr *ngFor="let item of todos; let i = index">
             <th scope="row" style="width: 10%">{{ i + 1 }}</th>
             <td
-              class="{{ item.isCompleted ? '' : 'doneTodo' }}"
+              class="{{ item.isCompleted ? 'doneTodo' : '' }}"
               style="width: 80%"
               (click)="doneTodo(i)">
               {{ item.name }}

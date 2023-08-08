@@ -12,7 +12,7 @@ export class TodoListComponent {
 
   saveTodo() {
     if (this.newTodo) {
-      const todo = new Todo(this.newTodo, true);
+      const todo = new Todo(this.newTodo, false);
       this.todos.push(todo);
       this.newTodo = '';
     } else {
